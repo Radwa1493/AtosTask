@@ -1,0 +1,38 @@
+Selenuim + Restassurance Project based on TestNG run  Chrome and display the result in Allure report .
+
+Please update Json file with ur own data
+
+  
+Project structure 
+    /new_poject/
+    ├── src/main/java/      
+    				 ├──stepDefinations
+    				 ├──TestCases
+    			    	├──AppTest.java
+    			    	├──@BeforeTest setUp()-> (Open chrome and navegate to the trello )
+    			    	├──@Test Login()-> (Enter Credintials from the json file ) Selenuim Java
+    			    	├──@Test CreateBoard_api()-> (Post request to add new board called automatedBoard )  Restassurance
+    			    	├──@Test GetList_api()-> (Get request to get all lists in the board  )  Restassurance
+    			    	├──@Test CreateCard_api()-> (Post request to add new card called APIautomatedcard at to do list)  Restassurance
+    			    	├──@Test moveCard()-> (Move card from to do list to doing list)Selenuim Java
+    			    	├──@Test AddCard()-> (Create new card at to do list)Selenuim Java	    	
+    				 ├──Pages
+    				    ├──Base.java
+    				    ├──BoardPage.java    	
+    				   	├──LandingPage.java   			 
+						├──LoginPage.java   			 
+    				   	
+    				 ├──Utilities
+   						├──testdata.json 
+   				    	├──readJson.java 
+    ├── pom.xml   
+    ├── testng.xml  
+
+Run project from testng.xml 
+or 
+Run from Command line :
+1- On CMD : cd path of the project
+2- On CMD : mvn test
+3- Allure report -> On CMD : allure serve
+
+

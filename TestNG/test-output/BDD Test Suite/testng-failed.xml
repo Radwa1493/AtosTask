@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite configfailurepolicy="continue" thread-count="1" parallel="tests" name="Failed suite [BDD Test Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="1" parallel="tests" name="Chrome(failed)">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="TestCases.AppTest">
+        <methods>
+          <include name="moveCard"/>
+          <include name="setUp"/>
+          <include name="AddCard"/>
+        </methods>
+      </class> <!-- TestCases.AppTest -->
+    </classes>
+  </test> <!-- Chrome(failed) -->
+</suite> <!-- Failed suite [BDD Test Suite] -->

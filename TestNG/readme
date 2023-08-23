@@ -1,6 +1,6 @@
 Selenuim + Restassurance Project based on TestNG run  Chrome and display the result in Allure report .
 
-Please update Json file with ur own data
+Please update testdata.Json file with ur own data art /src/main/java/Utilities/testdata.json
 
   
 Project structure 

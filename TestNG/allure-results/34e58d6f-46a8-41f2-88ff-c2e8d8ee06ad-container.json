@@ -1,1 +1,0 @@
-{"uuid":"34e58d6f-46a8-41f2-88ff-c2e8d8ee06ad","name":"Chrome","children":["c666dd05-c3aa-42b2-835c-967a8780be59","dc0dbf8a-e971-4d84-a66a-47fce32eba6f"],"befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1692725992539,"stop":1692725997757}],"afters":[],"start":1692725992507,"stop":1692726022235}

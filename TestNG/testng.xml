@@ -2,13 +2,21 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="BDD Test Suite" verbose="1" parallel="tests"
 	thread-count="1" configfailurepolicy="continue">
-
+	<!-- 
 	  <test name="Chrome">
        <parameter name="browser" value="Chrome"/>
         <classes>
 			<class name="TestCases.AppTest" />
         </classes>
     </test> 
+    
+-->
 
- 
+ 	<test name="Firefox">
+       <parameter name="browser" value="Firefox"/>
+        <classes>
+			<class name="TestCases.AppTest" />
+        </classes>
+    </test>  
+    
 </suite>

@@ -3,18 +3,14 @@ package TestCases;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.MalformedURLException;
-import java.util.concurrent.TimeUnit;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.simple.parser.ParseException;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -25,12 +21,12 @@ import com.mashape.unirest.http.JsonNode;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
 
+import Utilities.readJson;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import pages.Base;
 import pages.BoardPage;
 import pages.LandingPage;
 import pages.LoginPage;
-import Utilities.readJson;
 
 
 public class AppTest extends Base
@@ -54,13 +50,19 @@ public class AppTest extends Base
 		System.out.println("Starting..... ");	
 	if (browser.equals("Chrome") ){
 			System.out.println("Open Local Chrome");		
+	
+			ChromeOptions chromeOptions = new ChromeOptions();
 			WebDriverManager.chromedriver().setup();
-			ChromeOptions options = new ChromeOptions();
-			options.addArguments("incognito");
-			DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-			capabilities.setCapability(ChromeOptions.CAPABILITY, options);
-			driver = new ChromeDriver(options); 
+			 driver = new ChromeDriver(chromeOptions);
+			
 		}
+	
+	else if  (browser.equals("Firefox") ){
+		System.out.println("Open Local Firefox");
+		WebDriverManager.firefoxdriver().setup();
+		driver= new FirefoxDriver();
+	}
+	
 		driver.manage().window().maximize();
 		System.out.println("Open URL");
 		driver.get("https://trello.com/login");

@@ -1,1 +1,0 @@
-{"uuid":"db3c8b19-3fbf-4ed0-86ca-c18d13e6b0b3","name":"Firefox","children":["a8f15f7f-0b2a-409d-9761-2b9ef65c3f57"],"befores":[{"name":"OpenURL","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1692699304370,"stop":1692699304377}],"afters":[],"start":1692699304348,"stop":1692699304624}
